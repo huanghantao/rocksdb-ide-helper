@@ -1,0 +1,17 @@
+{
+    "name": "hantaohuang/rocksdb-ide-helper",
+    "description": "rocksdb ide helper",
+    "type": "library",
+    "authors": [
+        {
+            "name": "codinghuang",
+            "email": "2812240764@qq.com"
+        }
+    ],
+    "require": {},
+    "autoload-dev": {
+        "psr-4": {
+            "RocksDB\\IDEHelper\\": "src/"
+        }
+    }
+}

@@ -1,5 +1,7 @@
 <?php
 
+use RocksDB\WriteBatch;
+
 class RocksDB
 {
 
@@ -8,9 +10,7 @@ class RocksDB
      */
     public function __construct(
         string $dbName,
-        array $options,
-        array $readOptions,
-        array $writeOptions,
+        array $options = [],
         int $mode = 0,
         int $ttl = 0,
         string $secondaryPath = ''
@@ -21,35 +21,56 @@ class RocksDB
     /**
      * @return bool
      */
-    public function put(string $key, string $value)
+    public function put(string $key, string $value, array $writeOptions = [])
+    {
+    }
+
+    /**
+     * @return bool
+     */
+    public function write(WriteBatch $batch, array $writeOptions = [])
     {
     }
 
     /**
      * @return string
      */
-    public function get(string $key)
+    public function get(string $key, array $readOptions = [])
     {
     }
 
     /**
      * @return bool
      */
-    public function del(string $key)
+    public function del(string $key, array $writeOptions = [])
     {
     }
 
     /**
      * @return bool
      */
-    public function deleteRange(string $beginKey)
+    public function deleteRange(string $beginKey, string $endKey, array $writeOptions = [])
     {
     }
 
     /**
      * @return RocksDB\Iterator
      */
-    public function newIterator(string $beginKey)
+    public function newIterator(string $beginKey, array $readOptions = [])
+    {
+    }
+
+    /**
+     * @return bool
+     */
+    public function close()
+    {
+    }
+
+    /**
+     * @return bool
+     */
+    public static function destroyDB(string $dbName, array $options = [])
     {
     }
 }

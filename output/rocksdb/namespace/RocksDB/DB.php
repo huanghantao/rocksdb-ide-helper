@@ -10,12 +10,28 @@ class DB
     /**
      * @return DB
      */
-    public function __construct(
-        string $dbName,
-        array $options = [],
-        int $mode = 0,
-        string $secondaryPath = ''
-    )
+    public function __construct()
+    {
+    }
+
+    /**
+     * @return bool
+     */
+    public function open(string $dbName, array $options = [])
+    {
+    }
+
+    /**
+     * @return bool
+     */
+    public function openForReadOnly(string $dbName, array $options = [])
+    {
+    }
+
+    /**
+     * @return bool
+     */
+    public function openAsSecondary(string $dbName, array $options = [], string $secondaryPath = '')
     {
     }
 

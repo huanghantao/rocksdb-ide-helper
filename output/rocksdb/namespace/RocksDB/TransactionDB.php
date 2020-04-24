@@ -7,11 +7,14 @@ class TransactionDB
     /**
      * @return TransactionDB
      */
-    public function __construct(
-        string $dbName,
-        array $options = [],
-        array $transactionDBOptions = []
-    )
+    public function __construct()
+    {
+    }
+
+    /**
+     * @return bool
+     */
+    public function open(string $dbName, array $options = [], array $transactionDBOptions = [])
     {
     }
 

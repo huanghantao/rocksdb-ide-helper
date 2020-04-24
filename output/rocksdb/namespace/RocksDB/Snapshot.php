@@ -2,13 +2,12 @@
 
 namespace RocksDB;
 
-class Iterator
+class Snapshot
 {
     /**
-     * @return Iterator
+     * @return Snapshot
      */
     public function __construct(
-        string $beginKey
     )
     {
     }

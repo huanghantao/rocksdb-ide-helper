@@ -1,18 +1,19 @@
 <?php
 
+namespace RocksDB;
+
 use RocksDB\WriteBatch;
 
-class RocksDB
+class DB
 {
 
     /**
-     * @return RocksDB
+     * @return DB
      */
     public function __construct(
         string $dbName,
         array $options = [],
         int $mode = 0,
-        int $ttl = 0,
         string $secondaryPath = ''
     )
     {
@@ -54,7 +55,7 @@ class RocksDB
     }
 
     /**
-     * @return RocksDB\Iterator
+     * @return Iterator
      */
     public function newIterator(string $beginKey, array $readOptions = [])
     {

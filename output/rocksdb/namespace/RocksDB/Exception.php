@@ -2,6 +2,6 @@
 
 namespace RocksDB;
 
-class Exception
+class Exception extends \Exception
 {
 }

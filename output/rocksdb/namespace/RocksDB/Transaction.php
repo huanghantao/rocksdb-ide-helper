@@ -6,6 +6,7 @@ class Transaction
 {
     /**
      * @return bool
+     * @throws Exception
      */
     public function put(string $key, string $value)
     {
@@ -13,6 +14,7 @@ class Transaction
 
     /**
      * @return string
+     * @throws Exception
      */
     public function get(string $key, array $readOptions = [])
     {
@@ -20,6 +22,7 @@ class Transaction
 
     /**
      * @return bool
+     * @throws Exception
      */
     public function commit()
     {
@@ -34,6 +37,7 @@ class Transaction
 
     /**
      * @return bool
+     * @throws Exception
      */
     public function rollback()
     {

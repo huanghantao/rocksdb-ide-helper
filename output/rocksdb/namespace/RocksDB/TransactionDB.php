@@ -13,6 +13,7 @@ class TransactionDB
 
     /**
      * @return bool
+     * @throws Exception
      */
     public function open(string $dbName, array $options = [], array $transactionDBOptions = [])
     {
@@ -27,6 +28,7 @@ class TransactionDB
 
     /**
      * @return bool
+     * @throws Exception
      */
     public function put(string $key, string $value, array $writeOptions = [])
     {
@@ -34,6 +36,7 @@ class TransactionDB
 
     /**
      * @return string
+     * @throws Exception
      */
     public function get(string $key, array $readOptions = [])
     {
@@ -41,6 +44,7 @@ class TransactionDB
 
     /**
      * @return bool
+     * @throws Exception
      */
     public function close()
     {

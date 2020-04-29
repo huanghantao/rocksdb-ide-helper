@@ -16,6 +16,7 @@ class DB
 
     /**
      * @return bool
+     * @throws Exception
      */
     public function open(string $dbName, array $options = [])
     {
@@ -23,6 +24,7 @@ class DB
 
     /**
      * @return bool
+     * @throws Exception
      */
     public function openForReadOnly(string $dbName, array $options = [])
     {
@@ -30,6 +32,7 @@ class DB
 
     /**
      * @return bool
+     * @throws Exception
      */
     public function openAsSecondary(string $dbName, array $options = [], string $secondaryPath = '')
     {
@@ -37,6 +40,7 @@ class DB
 
     /**
      * @return bool
+     * @throws Exception
      */
     public function put(string $key, string $value, array $writeOptions = [])
     {
@@ -44,6 +48,7 @@ class DB
 
     /**
      * @return bool
+     * @throws Exception
      */
     public function write(WriteBatch $batch, array $writeOptions = [])
     {
@@ -51,6 +56,7 @@ class DB
 
     /**
      * @return string
+     * @throws Exception
      */
     public function get(string $key, array $readOptions = [])
     {
@@ -58,6 +64,7 @@ class DB
 
     /**
      * @return bool
+     * @throws Exception
      */
     public function del(string $key, array $writeOptions = [])
     {
@@ -65,6 +72,7 @@ class DB
 
     /**
      * @return bool
+     * @throws Exception
      */
     public function deleteRange(string $beginKey, string $endKey, array $writeOptions = [])
     {
@@ -79,6 +87,7 @@ class DB
 
     /**
      * @return bool
+     * @throws Exception
      */
     public function close()
     {
@@ -86,6 +95,7 @@ class DB
 
     /**
      * @return bool
+     * @throws Exception
      */
     public static function destroyDB(string $dbName, array $options = [])
     {

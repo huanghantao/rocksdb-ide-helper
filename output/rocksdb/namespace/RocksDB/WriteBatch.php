@@ -13,6 +13,7 @@ class WriteBatch
 
     /**
      * @return bool
+     * @throws Exception
      */
     public function delete(string $key)
     {
@@ -20,6 +21,7 @@ class WriteBatch
 
     /**
      * @return bool
+     * @throws Exception
      */
     public function put(string $key, string $value)
     {

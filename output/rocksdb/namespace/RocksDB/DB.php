@@ -100,4 +100,18 @@ class DB
     public static function destroyDB(string $dbName, array $options = [])
     {
     }
+
+    /**
+     * @return bool
+     */
+    public function keyMayExist(string $key, array $readOptions = [])
+    {
+    }
+
+    /**
+     * @return bool
+     */
+    public function keyExist(string $key, array $readOptions = [])
+    {
+    }
 }
